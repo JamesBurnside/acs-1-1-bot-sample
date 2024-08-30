@@ -94,7 +94,7 @@ export const ConfigurationPage = (props: {
           }
         }}
       >
-        Join Call
+        Start Call
       </PrimaryButton>
     </Stack>
   );

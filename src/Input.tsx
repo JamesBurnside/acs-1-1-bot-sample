@@ -25,7 +25,7 @@ export const CollectAzureDetails = (props: {
   return (
     <Stack tokens={{ childrenGap: '0.5rem' }}>
       <TextField
-        label="UserId"
+        label="ACS UserId"
         onChange={(_, newValue) => {
           setUserId(newValue);
           setLocalStorageItem('userId', newValue);
@@ -35,7 +35,7 @@ export const CollectAzureDetails = (props: {
         styles={{ root: { width: '20rem' } }}
       />
       <TextField
-        label="Token"
+        label="ACS Token"
         onChange={(_, newValue) => {
           setToken(newValue);
           setLocalStorageItem('token', newValue);
@@ -45,7 +45,7 @@ export const CollectAzureDetails = (props: {
         styles={{ root: { width: '20rem' } }}
       />
       <TextField
-        label="Bot MRI"
+        label="Callee (Bot MRI)"
         defaultValue={botMri}
         onChange={(_, newValue) => {
           setBotMri(newValue);
@@ -68,7 +68,7 @@ export const CollectAzureDetails = (props: {
             });
         }}
       >
-        Join call
+        Start call
       </PrimaryButton>
     </Stack>
   );
