@@ -28,7 +28,7 @@ export const ComponentsScreen = (props: {
         {!call ? (
           <ConfigurationPage
             setCall={setCall}
-            locator={{ botMri: props.azureDetails.botMri }}
+            botMri={props.azureDetails.botMri}
           />
         ) : (
           <CallProvider call={call}>

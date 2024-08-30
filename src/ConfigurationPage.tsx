@@ -1,8 +1,6 @@
 import {
   Call,
   EnvironmentInfo,
-  Features,
-  GroupCallLocator,
 } from "@azure/communication-calling";
 import {
   CallClientState,
@@ -25,7 +23,7 @@ import {
 import { useEffect } from "react";
 
 export const ConfigurationPage = (props: {
-  locator: GroupCallLocator;
+  botMri: string;
   setCall: (call: Call) => void;
 }): JSX.Element => {
   const theme = useTheme();
@@ -84,11 +82,10 @@ export const ConfigurationPage = (props: {
       <br />
       <PrimaryButton
         onClick={() => {
-          // const call = callAgent?.join(props.locator);
           try {
             const call = callAgent?.startCall([
               {
-                id: "8:echo123",
+                id: props.botMri,
               },
             ]);
             props.setCall(call);
